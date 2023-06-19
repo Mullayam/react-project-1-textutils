@@ -1,6 +1,6 @@
 import React from "react";
  
-import About from './components/About';
+ 
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import {useState} from 'react';
@@ -45,7 +45,7 @@ setTimeout(() => {
 
       <TextForm  showAlert={showAlert} heading="Text Analyzer"  mode={mode}/>
 
-      <About mode={mode} />
+      
 
       
     
