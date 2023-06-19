@@ -7,7 +7,7 @@ export default function Navbar(props){
         <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
           <div className="container-fluid">
           <a className="navbar-brand" to="/">
-              <img src={logo}  width="30" height="24"  className="d-inline-block align-text-top"/>
+              <img src={logo}  width="30" height="24"  alt="logo" className="d-inline-block align-text-top"/>
               {props.title}
               </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,12 +16,10 @@ export default function Navbar(props){
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                
-              <li className="nav-item mx-2">
-                <a className="nav-a" href="#">{props.about}</a>
-              </li>
+            
               
               <li className="nav-item mx-2">
-                <a className="nav-a disabled">{props.contact}</a>
+                <a className="nav-a disabled" href="/contacts">{props.contact}</a>
               </li>
             </ul>
             <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark':'light'}`}>
