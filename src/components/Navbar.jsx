@@ -1,15 +1,15 @@
 import React from "react";
 import logo from '../logo.svg' ;
- 
+ import { Link } from "react-router-dom";
 
 export default function Navbar(props){
     return(
         <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
           <div className="container-fluid">
-          <a className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/">
               <img src={logo}  width="30" height="24"  alt="logo" className="d-inline-block align-text-top"/>
               {props.title}
-              </a>
+              </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -19,7 +19,7 @@ export default function Navbar(props){
             
               
               <li className="nav-item mx-2">
-                <a className="nav-a disabled" href="/contacts">{props.contact}</a>
+                <Link className="nav-a disabled" to="/contacts">{props.contact}</Link>
               </li>
             </ul>
             <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark':'light'}`}>
